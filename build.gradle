@@ -19,8 +19,10 @@ task wrapper(type: Wrapper) {
 }
 
 task runProcessor(type: JavaExec) {
-//    description 'TODO'
+    description 'Reads properties files from Git / the filesystem, and loads them into Consul'
     classpath = sourceSets.main.runtimeClasspath
+
     main = 'com.steveperkins.config.Processor'
-    args Arrays.asList('properties', '127.0.0.1').toArray()
+    args Arrays.asList('127.0.0.1').toArray()
 }
+
