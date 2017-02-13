@@ -1,0 +1,25 @@
+group 'com.steveperkins'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = 3.3
+}
+
+task runProcessor(type: JavaExec) {
+//    description 'TODO'
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.steveperkins.config.Processor'
+//    args Arrays.asList('', '').toArray()
+}
