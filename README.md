@@ -55,7 +55,7 @@ vault write auth/userpass/users/vault_user password=vault_pass policies=writers
 
 vault write secret/application jdbcUsername=scott jdbcPassword=tiger
 ```
-The `writers.hcl` file is located in the root of this reps.  This policy grants our test user access to a path branch 
+The `writers.hcl` file is located in the root of this repo.  This policy grants our test user access to a path branch 
 in Vault's tree-like structure.  In real life, you might want to create separate policies for the various environments 
 and/or applications (at *some* level of granularity), so that you can control access and prevent one application from 
 being able to read another one's secrets.
